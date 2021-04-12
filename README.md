@@ -1,2 +1,3 @@
 # Video-Coding
-TU Ilmenau-Seminars Course Video Coding
+TU Ilmenau-Seminars Master Course Video Coding
+
