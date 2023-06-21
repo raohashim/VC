@@ -2,15 +2,8 @@
 TU Ilmenau-Seminars Master Course Video Coding
 
 
-best_hyper_run = hyperdrive_run.get_best_run_by_primary_metric()
-best_hyper_run_metrics = best_hyper_run.get_metrics()
-parameter_values = best_hyper_run.get_details() ['runDefinition']['arguments']
-
-os.makedirs("./outputs", exist_ok=True)
-joblib.dump(value=best_hyper_run.id,filename='outputs/best_hyper_run_model.joblib')
+automl_best_model = best_run.register_model(model_name = "best-automl-model", model_path = './outputs/model.pkl', properties={'Accuracy': best_run_metrics['accuracy']})
 
 
-print('Best Run Id: ', best_hyper_run.id)
-print('\n Accuracy: ', best_hyper_run_metrics['Accuracy'])
-print('\n Metrics: ', best_hyper_run_metrics)
-print('\n Parameters: ', parameter_values)
+best_hd_model = best_hyper_run.register_model(model_name='best_hyperdrive_model', model_path='./')
+
