@@ -1,5 +1,12 @@
 # Video-Coding
 TU Ilmenau-Seminars Master Course Video Coding
 
-[https://github.com/fati-ma/Capstone/blob/master/automl%20(3)%20(1).ipynb
+To obtain the service state and relevant information, such as the scoring URI, Swagger URI, and authentication keys, you can use the following code:
+
+primary, secondary = service.get_keys()
+
+print('Service state:', service.state)
+print('Service scoring URI:', service.scoring_uri)
+print('Service Swagger URI:', service.swagger_uri)
+print('Service primary authentication key:', primary)
 
